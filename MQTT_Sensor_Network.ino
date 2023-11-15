@@ -151,16 +151,16 @@ void setup_wifi() {
 }
 
 void callback(char* topic, byte* payload, unsigned int length) {
-  Serial.print("Message arrived [");
-  Serial.print(topic);
-  Serial.print("] ");
+  Serial.printf("Message arrived [%s] ", topic);
+
   for (int i = 0; i < length; i++) {
     Serial.print((char)payload[i]);
   }
   Serial.println();
-
-  if((const char *)topic == "state"){
-    state = (States)payload[0];
+  
+  if(strcmp(topic, "new_state") == 0){
+    int state_i = payload[0] - '0' ;
+    state = (States)state_i;
     Serial.printf("New state is %d.\n", state);
   }
 
@@ -179,7 +179,7 @@ void reconnect() {
       // Once connected, publish an announcement...
       client.publish("outTopic", "hello world");
       // ... and resubscribe
-      client.subscribe("state");
+      client.subscribe("new_state");
     } else {
       Serial.print("failed, rc=");
       Serial.print(client.state());
