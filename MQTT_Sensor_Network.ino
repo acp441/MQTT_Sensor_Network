@@ -357,9 +357,8 @@ if(adc1_get_raw(ANALOG_X) < 10){
       Serial.println("Measurement done.");
     }
     times_measured++; 
-  }
-  if(digitalRead(EMERGENCY_SWITCH) == LOW){
-    times_measured = 0; 
+  } else if(digitalRead(EMERGENCY_SWITCH) == LOW){
+    times_measured = 0;
     Serial.println("Beginning measurement...");
   }
 #endif // %%%%%%%%%%%% --- %%%%%%%%%%%
