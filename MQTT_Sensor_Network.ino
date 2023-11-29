@@ -343,8 +343,47 @@ if(adc1_get_raw(ANALOG_X) < 10){
 
 
 #if EXEC_MODE == MODE_MPU6050_ONLY
-  static int times_measured = 30;
-  if(times_measured  < 30){
+  static int times_measured = 1000;
+  if(state.Transport == 1)
+  {
+    if(state.Ruhe || state.Fernsteuerung){
+      Serial.println("ERROR: mehrere states sind 1");
+    }
+    static long started = -10000;
+    if(millis() - started < 10000){
+      long countdown = 10000 - (millis() - started);
+      snprintf(msg, MSG_BUFFER_SIZE, "Starte in %d.", int(countdown / 1000));
+      client.publish("ESP_message", msg);
+    } else if(times_measured  < 1000)
+    {
+      getAccData();
+      getGyroData();
+      getAngles();
+      getAccAngleData();
+      publishState(state.Ruhe);
+      publishState(state.Fernsteuerung);
+      publishState(state.Transport);
+
+      snprintf(msg, MSG_BUFFER_SIZE, "%d", times_measured);
+      client.publish("ESP_message", msg);
+  
+      if(times_measured == 999){
+        Serial.println("Measurement done.");
+        snprintf(msg, MSG_BUFFER_SIZE, "Messung abgeschlossen.", NULL);
+        client.publish("ESP_message", msg);
+      }
+      times_measured++; 
+    } else if(digitalRead(EMERGENCY_SWITCH) == LOW)
+    {
+      started = millis();
+      times_measured = 0;
+      Serial.println("Beginning measurement...");
+      snprintf(msg, MSG_BUFFER_SIZE, "Starte Messung", NULL);
+      client.publish("ESP_message", msg);
+  }
+  // ENDE if (state.Transport == 1)
+  } else if(times_measured  < 30)
+  {
     getAccData();
     getGyroData();
     getAngles();
@@ -352,14 +391,24 @@ if(adc1_get_raw(ANALOG_X) < 10){
     publishState(state.Ruhe);
     publishState(state.Fernsteuerung);
     publishState(state.Transport);
+    snprintf(msg, MSG_BUFFER_SIZE, "%d", times_measured);
+    client.publish("ESP_message", msg);
  
-    if(times_measured == 29){
+    if(times_measured == 29)
+    {
       Serial.println("Measurement done.");
+      snprintf(msg, MSG_BUFFER_SIZE, "Mesung abgeschlossen.", NULL);
+      client.publish("ESP_message", msg);
+      times_measured = 1001;
     }
     times_measured++; 
-  } else if(digitalRead(EMERGENCY_SWITCH) == LOW){
+  } 
+  else if(digitalRead(EMERGENCY_SWITCH) == LOW)
+  {
     times_measured = 0;
     Serial.println("Beginning measurement...");
+    snprintf(msg, MSG_BUFFER_SIZE, "Starte Messung", NULL);
+    client.publish("ESP_message", msg);
   }
 #endif // %%%%%%%%%%%% --- %%%%%%%%%%%
 
