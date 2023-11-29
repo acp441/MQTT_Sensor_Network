@@ -1,11 +1,8 @@
 #include <Wire.h>
 #include <Adafruit_BMP280.h>
-#include <PubSubClient.h>
 #include <WiFi.h>
 #include "driver/adc.h"
-#include "D:/credentials.h"
 #include <MPU6050_light.h>
-
 
 #define I2C_SERIAL_PIN 21
 #define I2C_CLK_PIN 22
@@ -15,14 +12,12 @@
 #include <WiFi.h>
 #include "D:/credentials.h"
 
-#define BUILTIN_LED 2
-
 // MQTT defines
-#define ENV 3 // 1 for testing at home, 2 for wlan at HAW, 3 for mobile hotspot (laptop)
+#define ENV 1 // 1 for testing at home, 2 for wlan at HAW, 3 for mobile hotspot (laptop)
 #if ENV == 1
   #define SSID SSID_HOME
   #define WIFI_PW WIFI_PW_HOME
-  #define MQTT_SERVER_IP "lennardjoensson.de"
+  #define MQTT_SERVER_IP MQTT_SERVER_IP_HOME  // Ich habs bei mir ins credentials file gepackt, ist so für beide Seiten entspannter
 #elif ENV == 2
   #define SSID "Muecke"
   #define WIFI_PW "mosquitto23"
@@ -46,36 +41,54 @@
 #define ANALOG_Y ADC1_CHANNEL_5
 
 // BMP280 defines
-
 Adafruit_BMP280 bmp;
 Adafruit_Sensor *bmp_temp = bmp.getTemperatureSensor();
 Adafruit_Sensor *bmp_pressure = bmp.getPressureSensor(); 
 
-// Interrupt pins defines
+// Interrupt pin defines
 #define JOYSTICK_SW_PIN 15
 #define EMERGENCY_SWITCH 25
 
+// More Pin defines
+#define BUILTIN_LED 2
+
+// Communication
 WiFiClient espClient;
 PubSubClient client(espClient);
 unsigned long lastMsg = 0;
 #define MSG_BUFFER_SIZE	(50)
 char msg[MSG_BUFFER_SIZE];
-int value = 0;
 
 MPU6050 mpu(Wire);
 
-enum States : char {
-  Ruhe = 0,
+// Remote controle states
+/*enum States : char {
+  Ruhe = 1,
   Fernsteuerung,
   Transport
 };
 States state; // states we want to classify
+*/
 
+// Realisierung des one hot encodings
+typedef struct {
+    int Ruhe;
+    int Fernsteuerung;
+    int Transport;
+} States;
+States state = {1,0,0};
+
+#define RUHE 1
+#define FERNSTEUERUNG 2
+#define TRANSPORT 3
+
+// Publish Remote Controle State
 void publishState(int state){
   snprintf(msg, MSG_BUFFER_SIZE, "%d", state);
   client.publish("state", msg);
 }
 
+// Acceleration data from MPU6050
 void getAccData(){
   float accX = mpu.getAccX();
   float accY = mpu.getAccY();
@@ -90,6 +103,7 @@ void getAccData(){
   client.publish("accelerationZ", msg);
 }
 
+// Rotation-Speed data from MPU6050
 void getGyroData(){
   float gyroX = mpu.getGyroX();
   float gyroY = mpu.getGyroY();
@@ -104,6 +118,7 @@ void getGyroData(){
   client.publish("gyrometerZ", msg);
 }
 
+// Angle data from MPU6050
 void getAngles(){
   float angleX = mpu.getAngleX();
   float angleY = mpu.getAngleY();
@@ -118,6 +133,7 @@ void getAngles(){
   client.publish("angleZ", msg); 
 }
 
+// Angle acceleration data from MPU6050
 void getAccAngleData(){
   float accAngleX = mpu.getAccAngleX();
   float accAngleY = mpu.getAccAngleY();
@@ -159,9 +175,19 @@ void callback(char* topic, byte* payload, unsigned int length) {
   Serial.println();
   
   if(strcmp(topic, "new_state") == 0){
-    int state_i = payload[0] - '0' ;
-    state = (States)state_i;
-    Serial.printf("New state is %d.\n", state);
+    int state_i = payload[0] - '0';
+
+  
+    if (state_i == RUHE) {
+      state = (States){1, 0, 0};
+    } else if (state_i == FERNSTEUERUNG) {
+      state = (States){0, 1, 0};
+    } else if (state_i == TRANSPORT) {
+      state = (States){0, 0, 1};
+    } else {
+      Serial.printf("Error: State %d is not defined.\n", state_i);
+    }
+    Serial.printf("New state is %d.\n", state_i);
   }
 
 }
@@ -315,6 +341,7 @@ if(adc1_get_raw(ANALOG_X) < 10){
     }
 #endif // %%%%%%%%%%%% --- %%%%%%%%%%%
 
+
 #if EXEC_MODE == MODE_MPU6050_ONLY
   static int times_measured = 30;
   if(times_measured  < 30){
@@ -322,7 +349,10 @@ if(adc1_get_raw(ANALOG_X) < 10){
     getGyroData();
     getAngles();
     getAccAngleData();
-    publishState(state);
+    publishState(state.Ruhe);
+    publishState(state.Fernsteuerung);
+    publishState(state.Transport);
+ 
     if(times_measured == 29){
       Serial.println("Measurement done.");
     }

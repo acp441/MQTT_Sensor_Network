@@ -1,0 +1,2308 @@
+[
+    {
+        "id": "3e7bb0e807170910",
+        "type": "tab",
+        "label": "Home",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "a49f13b68fab1411",
+        "type": "tab",
+        "label": "Home",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "264270b88ebc059b",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "${MQTT_BROKER}",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "2a9f16b8462485ad",
+        "type": "ui_group",
+        "name": "Umgebungssensoren",
+        "tab": "11c82117f1e90cee",
+        "order": 1,
+        "disp": true,
+        "width": "12",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "11c82117f1e90cee",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "47ce286cc5c5a169",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "MQTT Sensor Readings",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "24a11f8bcf2ca4b9",
+        "type": "ui_group",
+        "name": "Joystick",
+        "tab": "11c82117f1e90cee",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "b93650b43e356af3",
+        "type": "global-config",
+        "name": "global-config",
+        "env": [
+            {
+                "name": "MQTT_BROKER",
+                "value": "192.168.188.24",
+                "type": "str"
+            }
+        ]
+    },
+    {
+        "id": "cc81adfa058d8268",
+        "type": "ui_group",
+        "name": "Not-Aus",
+        "tab": "11c82117f1e90cee",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "17651913a30fbae0",
+        "type": "ui_tab",
+        "name": "Bewegunssensoren",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "c9cc52b385239209",
+        "type": "ui_group",
+        "name": "Acceleration",
+        "tab": "17651913a30fbae0",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "fb69c914769ec30c",
+        "type": "ui_group",
+        "name": "Gyrometer",
+        "tab": "17651913a30fbae0",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "f89139f2b44331fe",
+        "type": "ui_group",
+        "name": "Angle ",
+        "tab": "17651913a30fbae0",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "9f7d2045d2811882",
+        "type": "mqtt in",
+        "z": "3e7bb0e807170910",
+        "d": true,
+        "name": "Temp_In",
+        "topic": "temperature",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "264270b88ebc059b",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 160,
+        "y": 160,
+        "wires": [
+            [
+                "5b76543ffb3e99f6",
+                "fe1ed2f3eaa8162b",
+                "03dc756d304af488"
+            ]
+        ]
+    },
+    {
+        "id": "b0f7e4bd2a743a88",
+        "type": "mqtt in",
+        "z": "3e7bb0e807170910",
+        "d": true,
+        "name": "Pressure_In",
+        "topic": "pressure",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "264270b88ebc059b",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 170,
+        "y": 260,
+        "wires": [
+            [
+                "2fe2502b0ccfdbff",
+                "e525852a16e6b987",
+                "03dc756d304af488"
+            ]
+        ]
+    },
+    {
+        "id": "5b76543ffb3e99f6",
+        "type": "ui_text",
+        "z": "3e7bb0e807170910",
+        "d": true,
+        "group": "2a9f16b8462485ad",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "Temperature Values",
+        "label": "Temperatur",
+        "format": "{{msg.payload}} °C",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 420,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "2fe2502b0ccfdbff",
+        "type": "ui_text",
+        "z": "3e7bb0e807170910",
+        "d": true,
+        "group": "2a9f16b8462485ad",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Luftdruck",
+        "format": "{{msg.payload}} hPa",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 380,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "fe1ed2f3eaa8162b",
+        "type": "ui_chart",
+        "z": "3e7bb0e807170910",
+        "d": true,
+        "name": "Temperature Chart",
+        "group": "2a9f16b8462485ad",
+        "order": 1,
+        "width": "12",
+        "height": "5",
+        "label": "Temperatur",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "No data yet",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 410,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e525852a16e6b987",
+        "type": "ui_chart",
+        "z": "3e7bb0e807170910",
+        "d": true,
+        "name": "",
+        "group": "2a9f16b8462485ad",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "label": "Luftdruck",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 380,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "03dc756d304af488",
+        "type": "debug",
+        "z": "3e7bb0e807170910",
+        "d": true,
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 360,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "74ec08e1f12a3e1f",
+        "type": "mqtt in",
+        "z": "3e7bb0e807170910",
+        "d": true,
+        "name": "Joystick X-Value",
+        "topic": "tiltX",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "264270b88ebc059b",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 200,
+        "y": 400,
+        "wires": [
+            [
+                "706f2ff0cb47136b",
+                "03dc756d304af488"
+            ]
+        ]
+    },
+    {
+        "id": "706f2ff0cb47136b",
+        "type": "ui_gauge",
+        "z": "3e7bb0e807170910",
+        "d": true,
+        "name": "",
+        "group": "24a11f8bcf2ca4b9",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Joystick X-Achse",
+        "label": "",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "1023",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": true,
+        "className": "",
+        "x": 450,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "06fbac22334ba2c6",
+        "type": "mqtt in",
+        "z": "3e7bb0e807170910",
+        "d": true,
+        "name": "Joystick Y-Value",
+        "topic": "tiltY",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "264270b88ebc059b",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 240,
+        "y": 500,
+        "wires": [
+            [
+                "ea9b28149d2ce4df"
+            ]
+        ]
+    },
+    {
+        "id": "ea9b28149d2ce4df",
+        "type": "ui_gauge",
+        "z": "3e7bb0e807170910",
+        "d": true,
+        "name": "Joystick Y-Achse",
+        "group": "24a11f8bcf2ca4b9",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Joystick Y-Achse",
+        "label": "",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "1023",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": true,
+        "className": "",
+        "x": 490,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "a7342baf52633f46",
+        "type": "file",
+        "z": "3e7bb0e807170910",
+        "d": true,
+        "name": "",
+        "filename": "d:/measurement/pressure_meas1.txt",
+        "filenameType": "str",
+        "appendNewline": true,
+        "createDir": true,
+        "overwriteFile": "false",
+        "encoding": "none",
+        "x": 730,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "06e4652293c6b343",
+        "type": "mqtt in",
+        "z": "3e7bb0e807170910",
+        "d": true,
+        "name": "Joystick Switch",
+        "topic": "joySwitch",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "264270b88ebc059b",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 260,
+        "y": 580,
+        "wires": [
+            [
+                "9ffbc9d01979d0fa"
+            ]
+        ]
+    },
+    {
+        "id": "3d0b64848ae89080",
+        "type": "mqtt in",
+        "z": "3e7bb0e807170910",
+        "d": true,
+        "name": "Emergency Switch",
+        "topic": "emergencySwitch",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "264270b88ebc059b",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 290,
+        "y": 640,
+        "wires": [
+            [
+                "2aeb7c43c3de54eb"
+            ]
+        ]
+    },
+    {
+        "id": "9e017f3ee78eaffb",
+        "type": "ui_text",
+        "z": "3e7bb0e807170910",
+        "d": true,
+        "group": "24a11f8bcf2ca4b9",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "JoystickSwitchText",
+        "label": "Joystick Switch",
+        "format": "<font color={{msg.color}} > {{msg.payload}} </font>",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 810,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "2aeb7c43c3de54eb",
+        "type": "function",
+        "z": "3e7bb0e807170910",
+        "d": true,
+        "name": "EmergencySWFunction",
+        "func": "if (msg.payload == \"ON\") {\n    msg.color = \"red\";\n}\nif (msg.payload == \"OFF\") {\n    msg.color = \"green\";\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 590,
+        "y": 640,
+        "wires": [
+            [
+                "1864f5d2d627e6f2"
+            ]
+        ]
+    },
+    {
+        "id": "1864f5d2d627e6f2",
+        "type": "ui_text",
+        "z": "3e7bb0e807170910",
+        "d": true,
+        "group": "24a11f8bcf2ca4b9",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "EmergencySwitchText",
+        "label": "Emergency Switch",
+        "format": "<font color={{msg.color}} > {{msg.payload}} </font>",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 840,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "9ffbc9d01979d0fa",
+        "type": "function",
+        "z": "3e7bb0e807170910",
+        "d": true,
+        "name": "JoystickSWFunction",
+        "func": "if(msg.payload == \"ON\"){\n    msg.color = \"red\";\n}\nif(msg.payload == \"OFF\"){\n    msg.color = \"green\";\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "// Code added here will be run once\n// whenever the node is started.\nvar msg2 = \"OFF\";\nreturn msg2;",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
+        "y": 580,
+        "wires": [
+            [
+                "9e017f3ee78eaffb"
+            ]
+        ]
+    },
+    {
+        "id": "f94b2624767c8f5f",
+        "type": "inject",
+        "z": "3e7bb0e807170910",
+        "d": true,
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "ON",
+        "payloadType": "str",
+        "x": 370,
+        "y": 720,
+        "wires": [
+            [
+                "9ffbc9d01979d0fa",
+                "2aeb7c43c3de54eb"
+            ]
+        ]
+    },
+    {
+        "id": "ecab84d28b5ffb1c",
+        "type": "inject",
+        "z": "3e7bb0e807170910",
+        "d": true,
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "OFF",
+        "payloadType": "str",
+        "x": 370,
+        "y": 780,
+        "wires": [
+            [
+                "9ffbc9d01979d0fa",
+                "2aeb7c43c3de54eb"
+            ]
+        ]
+    },
+    {
+        "id": "24dee91dd5a66c57",
+        "type": "inject",
+        "z": "3e7bb0e807170910",
+        "d": true,
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 80,
+        "wires": [
+            [
+                "7f06ca8109dcc6a2"
+            ]
+        ]
+    },
+    {
+        "id": "7f06ca8109dcc6a2",
+        "type": "mqtt out",
+        "z": "3e7bb0e807170910",
+        "d": true,
+        "name": "",
+        "topic": "temperature",
+        "qos": "0",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "264270b88ebc059b",
+        "x": 330,
+        "y": 20,
+        "wires": []
+    },
+    {
+        "id": "eaef10b6199818ab",
+        "type": "mqtt in",
+        "z": "a49f13b68fab1411",
+        "d": true,
+        "name": "Temp_In",
+        "topic": "temperature",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "264270b88ebc059b",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 160,
+        "y": 160,
+        "wires": [
+            [
+                "a84ae642ab6aea37",
+                "6e05736d58d033c5",
+                "2b10f79b0ad96f47"
+            ]
+        ]
+    },
+    {
+        "id": "b292a987c6fb9cbc",
+        "type": "mqtt in",
+        "z": "a49f13b68fab1411",
+        "d": true,
+        "name": "Pressure_In",
+        "topic": "pressure",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "264270b88ebc059b",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 170,
+        "y": 260,
+        "wires": [
+            [
+                "cd76e37286dd0366",
+                "323206cd789cd889",
+                "2b10f79b0ad96f47",
+                "3180752c077560f0"
+            ]
+        ]
+    },
+    {
+        "id": "a84ae642ab6aea37",
+        "type": "ui_text",
+        "z": "a49f13b68fab1411",
+        "d": true,
+        "group": "2a9f16b8462485ad",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "Temperature Values",
+        "label": "Temperatur",
+        "format": "{{msg.payload}} °C",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 460,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "cd76e37286dd0366",
+        "type": "ui_text",
+        "z": "a49f13b68fab1411",
+        "d": true,
+        "group": "2a9f16b8462485ad",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Luftdruck",
+        "format": "{{msg.payload}} hPa",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 420,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "6e05736d58d033c5",
+        "type": "ui_chart",
+        "z": "a49f13b68fab1411",
+        "d": true,
+        "name": "Temperature Chart",
+        "group": "2a9f16b8462485ad",
+        "order": 1,
+        "width": "12",
+        "height": "5",
+        "label": "Temperatur",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "No data yet",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "100",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 450,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "323206cd789cd889",
+        "type": "ui_chart",
+        "z": "a49f13b68fab1411",
+        "d": true,
+        "name": "",
+        "group": "2a9f16b8462485ad",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "label": "Luftdruck",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "100",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 420,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2b10f79b0ad96f47",
+        "type": "debug",
+        "z": "a49f13b68fab1411",
+        "d": true,
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 380,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "4a8fcb317908ac1d",
+        "type": "mqtt in",
+        "z": "a49f13b68fab1411",
+        "d": true,
+        "name": "Joystick X-Value",
+        "topic": "tiltX",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "264270b88ebc059b",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 180,
+        "y": 480,
+        "wires": [
+            [
+                "43b38d75d7b089d8",
+                "2b10f79b0ad96f47",
+                "7d2cc0e754e5922c"
+            ]
+        ]
+    },
+    {
+        "id": "43b38d75d7b089d8",
+        "type": "ui_gauge",
+        "z": "a49f13b68fab1411",
+        "d": true,
+        "name": "",
+        "group": "24a11f8bcf2ca4b9",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Joystick X-Achse",
+        "label": "",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "1023",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": true,
+        "className": "",
+        "x": 450,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "ef66329dee74f27c",
+        "type": "mqtt in",
+        "z": "a49f13b68fab1411",
+        "d": true,
+        "name": "Joystick Y-Value",
+        "topic": "tiltY",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "264270b88ebc059b",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 180,
+        "y": 560,
+        "wires": [
+            [
+                "f59a8afb94dae589",
+                "2b10f79b0ad96f47",
+                "7b04efc40f5fefe0"
+            ]
+        ]
+    },
+    {
+        "id": "f59a8afb94dae589",
+        "type": "ui_gauge",
+        "z": "a49f13b68fab1411",
+        "d": true,
+        "name": "Joystick Y-Achse",
+        "group": "24a11f8bcf2ca4b9",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Joystick Y-Achse",
+        "label": "",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "1023",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": true,
+        "className": "",
+        "x": 450,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "be1392dfa1dc3ddd",
+        "type": "mqtt in",
+        "z": "a49f13b68fab1411",
+        "d": true,
+        "name": "Joystick Button",
+        "topic": "joystickButtonState",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "264270b88ebc059b",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 180,
+        "y": 640,
+        "wires": [
+            [
+                "d92ffadd0eb46283",
+                "2b10f79b0ad96f47"
+            ]
+        ]
+    },
+    {
+        "id": "54bcba13d5cd4902",
+        "type": "ui_template",
+        "z": "a49f13b68fab1411",
+        "d": true,
+        "group": "24a11f8bcf2ca4b9",
+        "name": "Joystick Button Status",
+        "order": 3,
+        "width": "0",
+        "height": "0",
+        "format": "<div style=\"width: 100%; text-align: center; overflow: hidden;\">\n    <div style=\"background-color: {{msg.color}}; padding: 10px;\">\n        <span style=\"color: white; font-size: 16px; background-color: {{msg.color}}; \">{{msg.color === 'green' ? 'Betätigt' : 'Nicht betätigt'}}</span>\n    </div>\n</div>\n\n<style>\n    .nr-dashboard-template {\n        overflow: hidden;\n    }\n</style>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 700,
+        "y": 640,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d92ffadd0eb46283",
+        "type": "function",
+        "z": "a49f13b68fab1411",
+        "d": true,
+        "name": "Farbdarstellung An / Aus",
+        "func": "if (msg.payload === 0) {\n    msg.color = \"green\";\n} else if (msg.payload === 1) {\n    msg.color = \"red\";\n} else {\n    // Optional: Wenn der Eingangswert weder 0 noch 1 ist, kannst du hier eine Standardfarbe festlegen.\n    msg.color = \"gray\"; // Ändere dies auf die gewünschte Standardfarbe\n}\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 640,
+        "wires": [
+            [
+                "54bcba13d5cd4902"
+            ]
+        ]
+    },
+    {
+        "id": "fee8673cb9103e46",
+        "type": "mqtt in",
+        "z": "a49f13b68fab1411",
+        "d": true,
+        "name": "Not-Aus Button",
+        "topic": "notAusButtonState",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "264270b88ebc059b",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 180,
+        "y": 820,
+        "wires": [
+            [
+                "2630bf7be8dff0f4",
+                "2b10f79b0ad96f47"
+            ]
+        ]
+    },
+    {
+        "id": "de23f407cb8c10bd",
+        "type": "ui_template",
+        "z": "a49f13b68fab1411",
+        "d": true,
+        "group": "cc81adfa058d8268",
+        "name": "Not-Aus Button Status",
+        "order": 3,
+        "width": "2",
+        "height": "2",
+        "format": "<div style=\"width: 60px; height: 60px; background-color: {{msg.color}}; overflow: hidden;\">\n    <div\n        style=\"position: relative; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center;\">\n        <span style=\"color: white; font-size: 10px;\">Not-Aus</span>\n    </div>\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 700,
+        "y": 820,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2630bf7be8dff0f4",
+        "type": "function",
+        "z": "a49f13b68fab1411",
+        "d": true,
+        "name": "Farbdarstellung An / Aus",
+        "func": "if (msg.payload === 0) {\n    msg.color = \"green\";\n} else if (msg.payload === 1) {\n    msg.color = \"red\";\n} else {\n    // Optional: Wenn der Eingangswert weder 0 noch 1 ist, kannst du hier eine Standardfarbe festlegen.\n    msg.color = \"gray\"; // Ändere dies auf die gewünschte Standardfarbe\n}\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 820,
+        "wires": [
+            [
+                "de23f407cb8c10bd"
+            ]
+        ]
+    },
+    {
+        "id": "a5997e0a141983d8",
+        "type": "comment",
+        "z": "a49f13b68fab1411",
+        "d": true,
+        "name": "Not-Aus",
+        "info": "",
+        "x": 160,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "8ba31401d9ecb279",
+        "type": "comment",
+        "z": "a49f13b68fab1411",
+        "d": true,
+        "name": "Joystick",
+        "info": "",
+        "x": 150,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "687928aad50a8b5d",
+        "type": "comment",
+        "z": "a49f13b68fab1411",
+        "d": true,
+        "name": "BMP280",
+        "info": "",
+        "x": 160,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "7d2cc0e754e5922c",
+        "type": "ui_chart",
+        "z": "a49f13b68fab1411",
+        "d": true,
+        "name": "Joy X-Chart",
+        "group": "2a9f16b8462485ad",
+        "order": 8,
+        "width": 0,
+        "height": 0,
+        "label": "Joy X-Chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "1023",
+        "removeOlder": 1,
+        "removeOlderPoints": "100",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 450,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7b04efc40f5fefe0",
+        "type": "ui_chart",
+        "z": "a49f13b68fab1411",
+        "d": true,
+        "name": "Joy Y-Chart",
+        "group": "2a9f16b8462485ad",
+        "order": 9,
+        "width": 0,
+        "height": 0,
+        "label": "Joy Y-Chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "1023",
+        "removeOlder": 1,
+        "removeOlderPoints": "100",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 450,
+        "y": 520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3180752c077560f0",
+        "type": "file",
+        "z": "a49f13b68fab1411",
+        "d": true,
+        "name": "",
+        "filename": "d:/measurement/pressure_meas1.txt",
+        "filenameType": "str",
+        "appendNewline": true,
+        "createDir": true,
+        "overwriteFile": "false",
+        "encoding": "none",
+        "x": 570,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "db63863a47b135ce",
+        "type": "comment",
+        "z": "a49f13b68fab1411",
+        "name": "Datenakquise mit MPU6050",
+        "info": "",
+        "x": 200,
+        "y": 960,
+        "wires": []
+    },
+    {
+        "id": "676090bb1663d7e5",
+        "type": "mqtt in",
+        "z": "a49f13b68fab1411",
+        "name": "",
+        "topic": "accelerationX",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "264270b88ebc059b",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 170,
+        "y": 1140,
+        "wires": [
+            [
+                "a3be4af70e53d6ac",
+                "28afe3334b2e1af6"
+            ]
+        ]
+    },
+    {
+        "id": "904b5794e65d9133",
+        "type": "mqtt in",
+        "z": "a49f13b68fab1411",
+        "name": "",
+        "topic": "accelerationY",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "264270b88ebc059b",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 170,
+        "y": 1200,
+        "wires": [
+            [
+                "a3be4af70e53d6ac",
+                "7df093661c3577f4"
+            ]
+        ]
+    },
+    {
+        "id": "d008291fd6dc5fd4",
+        "type": "mqtt in",
+        "z": "a49f13b68fab1411",
+        "name": "",
+        "topic": "accelerationZ",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "264270b88ebc059b",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 170,
+        "y": 1260,
+        "wires": [
+            [
+                "a3be4af70e53d6ac",
+                "b6481cc022262c51"
+            ]
+        ]
+    },
+    {
+        "id": "94953a8bcbd48b08",
+        "type": "inject",
+        "z": "a49f13b68fab1411",
+        "name": "state",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "accX,accY,accZ,gyrX,gyrY,gyrZ,angX,angY,angZ,accAngleX,accAngleY,state",
+        "payloadType": "str",
+        "x": 150,
+        "y": 1020,
+        "wires": [
+            [
+                "a3be4af70e53d6ac"
+            ]
+        ]
+    },
+    {
+        "id": "a3be4af70e53d6ac",
+        "type": "join",
+        "z": "a49f13b68fab1411",
+        "name": "",
+        "mode": "custom",
+        "build": "string",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": ",",
+        "joinerType": "str",
+        "accumulate": false,
+        "timeout": "",
+        "count": "14",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 510,
+        "y": 1360,
+        "wires": [
+            [
+                "b4d104169699a91f",
+                "0ba821dc5acf52ed"
+            ]
+        ]
+    },
+    {
+        "id": "b4d104169699a91f",
+        "type": "debug",
+        "z": "a49f13b68fab1411",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 740,
+        "y": 1280,
+        "wires": []
+    },
+    {
+        "id": "0519d8d4b3794320",
+        "type": "mqtt in",
+        "z": "a49f13b68fab1411",
+        "name": "",
+        "topic": "gyrometerX",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "264270b88ebc059b",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 170,
+        "y": 1340,
+        "wires": [
+            [
+                "a3be4af70e53d6ac",
+                "148fce7845e94391"
+            ]
+        ]
+    },
+    {
+        "id": "f7911788f3b9be83",
+        "type": "mqtt in",
+        "z": "a49f13b68fab1411",
+        "name": "",
+        "topic": "gyrometerY",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "264270b88ebc059b",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 170,
+        "y": 1380,
+        "wires": [
+            [
+                "a3be4af70e53d6ac",
+                "4211d82f4aeadc34"
+            ]
+        ]
+    },
+    {
+        "id": "b03694f35c969fbb",
+        "type": "mqtt in",
+        "z": "a49f13b68fab1411",
+        "name": "",
+        "topic": "gyrometerZ",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "264270b88ebc059b",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 170,
+        "y": 1420,
+        "wires": [
+            [
+                "a3be4af70e53d6ac",
+                "862cab05fc1c1aed"
+            ]
+        ]
+    },
+    {
+        "id": "bee2d492088ba3c9",
+        "type": "mqtt in",
+        "z": "a49f13b68fab1411",
+        "name": "",
+        "topic": "angleX",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "264270b88ebc059b",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 150,
+        "y": 1500,
+        "wires": [
+            [
+                "a3be4af70e53d6ac",
+                "f5bbb41ea741571a"
+            ]
+        ]
+    },
+    {
+        "id": "54adeafd0ec54cf5",
+        "type": "mqtt in",
+        "z": "a49f13b68fab1411",
+        "name": "",
+        "topic": "angleY",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "264270b88ebc059b",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 150,
+        "y": 1540,
+        "wires": [
+            [
+                "a3be4af70e53d6ac",
+                "8832676eb02b48d5"
+            ]
+        ]
+    },
+    {
+        "id": "bae0f057698880ad",
+        "type": "mqtt in",
+        "z": "a49f13b68fab1411",
+        "name": "",
+        "topic": "angleZ",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "264270b88ebc059b",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 150,
+        "y": 1580,
+        "wires": [
+            [
+                "a3be4af70e53d6ac",
+                "0d1f8efc5dc4b3c9"
+            ]
+        ]
+    },
+    {
+        "id": "0ba821dc5acf52ed",
+        "type": "file",
+        "z": "a49f13b68fab1411",
+        "name": "",
+        "filename": "d://measurements/mpu6050.csv",
+        "filenameType": "str",
+        "appendNewline": true,
+        "createDir": true,
+        "overwriteFile": "false",
+        "encoding": "none",
+        "x": 1350,
+        "y": 1360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "07c5753c0ba24f90",
+        "type": "mqtt in",
+        "z": "a49f13b68fab1411",
+        "name": "",
+        "topic": "accAngleX",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "264270b88ebc059b",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 160,
+        "y": 1660,
+        "wires": [
+            [
+                "a3be4af70e53d6ac"
+            ]
+        ]
+    },
+    {
+        "id": "acdea5e0ea11d73b",
+        "type": "mqtt in",
+        "z": "a49f13b68fab1411",
+        "name": "",
+        "topic": "accAngleY",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "264270b88ebc059b",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 160,
+        "y": 1700,
+        "wires": [
+            [
+                "a3be4af70e53d6ac"
+            ]
+        ]
+    },
+    {
+        "id": "892d5b96b248a310",
+        "type": "mqtt in",
+        "z": "a49f13b68fab1411",
+        "name": "",
+        "topic": "state",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "264270b88ebc059b",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 150,
+        "y": 1800,
+        "wires": [
+            [
+                "a3be4af70e53d6ac"
+            ]
+        ]
+    },
+    {
+        "id": "d13376525258f9fe",
+        "type": "mqtt out",
+        "z": "a49f13b68fab1411",
+        "name": "",
+        "topic": "new_state",
+        "qos": "0",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "264270b88ebc059b",
+        "x": 630,
+        "y": 1040,
+        "wires": []
+    },
+    {
+        "id": "bcd2ae16b1c9e563",
+        "type": "inject",
+        "z": "a49f13b68fab1411",
+        "name": "state",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "new_state",
+        "payload": "2",
+        "payloadType": "num",
+        "x": 430,
+        "y": 1040,
+        "wires": [
+            [
+                "d13376525258f9fe"
+            ]
+        ]
+    },
+    {
+        "id": "28afe3334b2e1af6",
+        "type": "ui_chart",
+        "z": "a49f13b68fab1411",
+        "name": "",
+        "group": "c9cc52b385239209",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "Acceleration X",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "100",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 480,
+        "y": 1140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7df093661c3577f4",
+        "type": "ui_chart",
+        "z": "a49f13b68fab1411",
+        "name": "",
+        "group": "c9cc52b385239209",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "label": "Acceleration Y",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "100",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 480,
+        "y": 1180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b6481cc022262c51",
+        "type": "ui_chart",
+        "z": "a49f13b68fab1411",
+        "name": "",
+        "group": "c9cc52b385239209",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "label": "Acceleration Z",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "100",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 480,
+        "y": 1220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "148fce7845e94391",
+        "type": "ui_chart",
+        "z": "a49f13b68fab1411",
+        "name": "",
+        "group": "fb69c914769ec30c",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "Gyrometer X",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "100",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 530,
+        "y": 1420,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4211d82f4aeadc34",
+        "type": "ui_chart",
+        "z": "a49f13b68fab1411",
+        "name": "",
+        "group": "fb69c914769ec30c",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "label": "Gyrometer Y",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "100",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 530,
+        "y": 1460,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "862cab05fc1c1aed",
+        "type": "ui_chart",
+        "z": "a49f13b68fab1411",
+        "name": "",
+        "group": "fb69c914769ec30c",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "label": "Gyrometer Z",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "100",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 530,
+        "y": 1500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f5bbb41ea741571a",
+        "type": "ui_chart",
+        "z": "a49f13b68fab1411",
+        "name": "",
+        "group": "f89139f2b44331fe",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "Angle X",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "100",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 520,
+        "y": 1560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8832676eb02b48d5",
+        "type": "ui_chart",
+        "z": "a49f13b68fab1411",
+        "name": "",
+        "group": "f89139f2b44331fe",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "Angle Y",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "100",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 520,
+        "y": 1600,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0d1f8efc5dc4b3c9",
+        "type": "ui_chart",
+        "z": "a49f13b68fab1411",
+        "name": "",
+        "group": "f89139f2b44331fe",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "Angle Z",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "100",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 520,
+        "y": 1640,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a019f05b9b119444",
+        "type": "inject",
+        "z": "a49f13b68fab1411",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "Header",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 750,
+        "y": 1180,
+        "wires": [
+            [
+                "c450db33aea9091d"
+            ]
+        ]
+    },
+    {
+        "id": "09949ce050017383",
+        "type": "file",
+        "z": "a49f13b68fab1411",
+        "name": "",
+        "filename": "d://measurements/mpu6050.csv",
+        "filenameType": "str",
+        "appendNewline": true,
+        "createDir": true,
+        "overwriteFile": "false",
+        "encoding": "none",
+        "x": 1350,
+        "y": 1180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c450db33aea9091d",
+        "type": "function",
+        "z": "a49f13b68fab1411",
+        "name": "Write header?",
+        "func": "// Prüfe, ob der Header bereits geschrieben wurde\nif (flow.get('headerWritten') !== true && msg.payload === true) {\n    \n    // Erstelle den Header\n    var newHeader = \"AccX,AccY,AccZ,GyroX,GyroY,GyroZ,AngleX,AngleY,AngleZ,RuheState,FernstState,TranspState\";\n\n    // Kombiniere Header und CSV-Zeile mit Zeilenumbruch\n    msg.payload = newHeader; // + \"\\n\";\n\n    // Setze den Flag, dass der Header geschrieben wurde\n    flow.set('headerWritten', true);\n} else {\n    // Wenn der Header bereits geschrieben wurde oder msg.payload nicht 'true' ist, setze payload auf null oder lass es unverändert\n    msg.payload = null;\n}\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1020,
+        "y": 1180,
+        "wires": [
+            [
+                "09949ce050017383"
+            ]
+        ]
+    },
+    {
+        "id": "bde1e2b0fab010b0",
+        "type": "comment",
+        "z": "a49f13b68fab1411",
+        "name": "Write Header",
+        "info": "",
+        "x": 730,
+        "y": 1140,
+        "wires": []
+    },
+    {
+        "id": "c851fa10ce44546b",
+        "type": "inject",
+        "z": "a49f13b68fab1411",
+        "name": "Press if header needs to be written again",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 830,
+        "y": 1220,
+        "wires": [
+            [
+                "9c6f9a7339dd1193"
+            ]
+        ]
+    },
+    {
+        "id": "9c6f9a7339dd1193",
+        "type": "function",
+        "z": "a49f13b68fab1411",
+        "name": "Reset \"Header Written\"-Flag",
+        "func": "// Setze das Flag zurück\nflow.set('headerWritten', false);\n\nreturn null; // Du kannst auch msg.payload = null verwenden, aber da wir nichts weiter senden, können wir null zurückgeben.\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1140,
+        "y": 1220,
+        "wires": [
+            []
+        ]
+    }
+]
