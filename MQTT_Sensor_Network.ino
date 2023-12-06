@@ -397,7 +397,7 @@ if(adc1_get_raw(ANALOG_X) < 10){
     if(times_measured == 29)
     {
       Serial.println("Measurement done.");
-      snprintf(msg, MSG_BUFFER_SIZE, "Mesung abgeschlossen.", NULL);
+      snprintf(msg, MSG_BUFFER_SIZE, "Messung abgeschlossen.", NULL);
       client.publish("ESP_message", msg);
       times_measured = 1001;
     }
